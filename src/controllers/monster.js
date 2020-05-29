@@ -126,7 +126,7 @@ class Monster extends Controller {
 
 			data.name = monsterData[data.pokemon_id] && monsterData[data.pokemon_id].name ? monsterData[data.pokemon_id].name : 'errormon'
 			data.formname = ''
-			data.iv = encountered ? ((+data.individual_attack + +data.individual_defense + +data.individual_stamina) / 0.45).toFixed(2) : -1
+			data.iv = encountered ? ((+data.individual_attack + +data.individual_defense + +data.individual_stamina) / 0.45).toFixed(0) : -1
 			data.individual_attack = encountered ? +data.individual_attack : 0
 			data.individual_defense = encountered ? +data.individual_defense : 0
 			data.individual_stamina = encountered ? +data.individual_stamina : 0
