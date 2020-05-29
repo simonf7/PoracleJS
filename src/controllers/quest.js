@@ -184,6 +184,7 @@ class Quest extends Controller {
 							neighbourhood: geoResult.neighbourhood,
 							flagemoji: geoResult.flag,
 							areas: data.matched.map((area) => area.replace(/'/gi, '').replace(/ /gi, '-')).join(', '),
+							area: data.matched[0],
 
 						})
 

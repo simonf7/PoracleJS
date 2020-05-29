@@ -249,6 +249,7 @@ class Raid extends Controller {
 												emojistring: data.emojistring,
 												pokemoji: emojiData.pokemon[data.pokemon_id],
 												areas: data.matched.map((area) => area.replace(/'/gi, '').replace(/ /gi, '-')).join(', '),
+												area: data.matched[0],
 
 											})
 
@@ -386,6 +387,7 @@ class Raid extends Controller {
 												neighbourhood: geoResult.neighbourhood,
 												flagemoji: geoResult.flag,
 												areas: data.matched.map((area) => area.replace(/'/gi, '').replace(/ /gi, '-')).join(', '),
+												area: data.matched[0],
 											})
 
 											const template = JSON.stringify(dts.egg[`${cares.template}`])
