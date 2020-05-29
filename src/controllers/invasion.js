@@ -255,7 +255,7 @@ class Incident extends Controller {
 									neighbourhood: geoResult.neighbourhood,
 									flagemoji: geoResult.flag,
 									areas: data.matched.map((area) => area.replace(/'/gi, '').replace(/ /gi, '-')).join(', '),
-									area: data.matched[0],
+									area: data.matched[0].charAt(0).toUpperCase() + data.matched[0].slice(1),
 								})
 
 								const template = JSON.stringify(dts.incident[`${cares.template}`])
