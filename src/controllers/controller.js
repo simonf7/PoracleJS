@@ -161,6 +161,22 @@ class Controller {
 		})
 	}
 
+	async smallArea(areas) {
+		return areas[0];
+	}
+
+	async bigArea(areas) {
+		let area = areas.pop();
+		if (area == 'server' && areas.length > 0) {
+			area = areas.pop();
+		}
+		if (area == 'norwich' && areas.length > 0) {
+			area = areas.pop();
+		}
+
+		return area;
+	}
+
 	getDiscordCache(id) {
 		let ch = _.cloneDeep(this.discordcache.get(id))
 		if (ch === undefined) {

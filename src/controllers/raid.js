@@ -29,6 +29,7 @@ require('moment-precise-range-plugin')
 moment.locale(config.locale.timeformat)
 
 const dts = require('../../config/dts')
+const { deflateRawSync } = require('zlib')
 
 class Raid extends Controller {
 
@@ -249,8 +250,8 @@ class Raid extends Controller {
 												emojistring: data.emojistring,
 												pokemoji: emojiData.pokemon[data.pokemon_id],
 												areas: data.matched.map((area) => area.replace(/'/gi, '').replace(/ /gi, '-')).join(', '),
-												area: data.matched[0].charAt(0).toUpperCase() + data.matched[0].slice(1),
-
+												area: this.smallArea(data.matched).toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
+												bigarea: this.bigArea(data.matched).toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
 											})
 
 											const template = JSON.stringify(dts.raid[`${cares.template}`])
@@ -387,8 +388,8 @@ class Raid extends Controller {
 												neighbourhood: geoResult.neighbourhood,
 												flagemoji: geoResult.flag,
 												areas: data.matched.map((area) => area.replace(/'/gi, '').replace(/ /gi, '-')).join(', '),
-												area: data.matched[0].toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
-												bigarea: data.matched[data.matched.length > 1 ? data.matched.length - 2 : 0].toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
+												area: this.smallArea(data.matched).toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
+												bigarea: this.bigArea(data.matched).toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
 											})
 
 											const template = JSON.stringify(dts.egg[`${cares.template}`])
