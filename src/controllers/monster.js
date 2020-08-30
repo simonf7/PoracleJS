@@ -241,8 +241,8 @@ class Monster extends Controller {
 								imgurl: data.imgurl,
 								pokemoji: emojiData.pokemon[data.pokemon_id],
 								areas: data.matched.map((area) => area.replace(/'/gi, '').replace(/ /gi, '-')).join(', '),
-								area: data.matched[0].toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
-								bigarea: data.matched[data.matched.length > 1 ? data.matched.length - 2 : 0].toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
+								area: this.smallArea(data.matched).toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
+								bigarea: this.bigArea(data.matched).toLowerCase().replace(/(?<= |-|_)[^\s]|^./g, a=>a.toUpperCase()),
 
 								// geocode stuff
 								lat: data.latitude.toString().substring(0, 8),
