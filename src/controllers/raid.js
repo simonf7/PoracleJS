@@ -363,7 +363,7 @@ class Raid extends Controller {
 												gymname: data.gymname,
 												teamname: data.teamname,
 												description: data.description,
-												level: data.level,
+												level: data.level > 5 ? 'm' : data.level,
 												staticmap: data.staticmap,
 												detailsurl: data.url,
 												mapurl: data.mapurl,
