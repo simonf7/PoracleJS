@@ -166,12 +166,14 @@ class Controller {
 	}
 
 	bigArea(areas) {
-		let area = areas.pop();
-		if (area == 'server' && areas.length > 0) {
-			area = areas.pop();
+		let areasCopy = JSON.parse(JSON.stringify(areas));
+		
+		let area = areasCopy.pop();
+		if (area == 'server' && areasCopy.length > 0) {
+			area = areasCopy.pop();
 		}
-		if (area == 'norwich' && areas.length > 0) {
-			area = areas.pop();
+		if (area == 'norwich' && areasCopy.length > 0) {
+			area = areasCopy.pop();
 		}
 
 		return area;
