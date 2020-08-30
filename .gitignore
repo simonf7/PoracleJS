@@ -1,6 +1,7 @@
 logs/*.json
 config/*.json
 !config/examples/*
+!config/dts.json
 !config/default.json
 !config/custom-environment-variables.json
 .env
