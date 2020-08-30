@@ -161,11 +161,11 @@ class Controller {
 		})
 	}
 
-	async smallArea(areas) {
+	smallArea(areas) {
 		return areas[0];
 	}
 
-	async bigArea(areas) {
+	bigArea(areas) {
 		let area = areas.pop();
 		if (area == 'server' && areas.length > 0) {
 			area = areas.pop();
