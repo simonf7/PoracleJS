@@ -62,7 +62,7 @@
       "embed": {
         "color": "{{color}}",
         "author": {
-          "name":"#{{id}} {{name}} end: {{time}}, time left: {{tthm}}m {{tths}}s {{flagemoji}} {{lat}},{{lon}} {{addr}}",
+          "name": "#{{id}} {{name}} end: {{time}}, time left: {{tthm}}m {{tths}}s {{flagemoji}} {{lat}},{{lon}} {{addr}}",
           "icon_url": "{{{imgurl}}}"
         },
         "description": "\n{{{emojistring}}}  [Google Maps]({{{mapurl}}}) [Apple Maps]({{{applemap}}})"
@@ -74,7 +74,7 @@
         "thumbnail": {
           "url": "{{{gif}}}"
         },
-        "description":"#{{id}} {{name}} end: {{time}}, time left: {{tthm}}m {{tths}}s {{flagemoji}} {{lat}},{{lon}} {{addr}} \n{{{emojistring}}}  [Google Maps]({{{mapurl}}}) [Apple Maps]({{{applemap}}})"
+        "description": "#{{id}} {{name}} end: {{time}}, time left: {{tthm}}m {{tths}}s {{flagemoji}} {{lat}},{{lon}} {{addr}} \n{{{emojistring}}}  [Google Maps]({{{mapurl}}}) [Apple Maps]({{{applemap}}})"
       }
     },
     "5": {
@@ -83,12 +83,12 @@
         "thumbnail": {
           "url": "{{{imgurl}}}"
         },
-        "description":"#{{id}} {{name}} end: {{time}}, \ntime left: {{tthm}}m {{tths}}s {{flagemoji}} {{lat}},{{lon}} {{addr}} \n{{{emojistring}}}  [Google Maps]({{{mapurl}}}) [Apple Maps]({{{applemap}}})"
+        "description": "#{{id}} {{name}} end: {{time}}, \ntime left: {{tthm}}m {{tths}}s {{flagemoji}} {{lat}},{{lon}} {{addr}} \n{{{emojistring}}}  [Google Maps]({{{mapurl}}}) [Apple Maps]({{{applemap}}})"
       }
     },
     "3": {
       "embed": {
-        "title":"{{{name}}} - {{tthm}}m ({{time}})",
+        "title": "{{{name}}} - {{tthm}}m ({{time}})",
         "color": "{{color}}",
         "thumbnail": {
           "url": "{{{imgurl}}}"
@@ -101,7 +101,7 @@
     },
     "4": {
       "embed": {
-        "title":"#{{id}} {{name}}",
+        "title": "#{{id}} {{name}}",
         "color": "{{color}}",
         "thumbnail": {
           "url": "{{{imgurl}}}"
@@ -109,7 +109,7 @@
         "image": {
           "url": "{{{staticmap}}}"
         },
-        "description":"#{{id}} {{name}} end: {{time}}, \nTime left: {{tthm}}m {{tths}}s {{lat}},{{lon}} {{addr}} \n{{{emojistring}}}  [Directions]({{{mapurl}}})"
+        "description": "#{{id}} {{name}} end: {{time}}, \nTime left: {{tthm}}m {{tths}}s {{lat}},{{lon}} {{addr}} \n{{{emojistring}}}  [Directions]({{{mapurl}}})"
       }
     }
   },
@@ -170,7 +170,7 @@
     "4": {
       "embed": {
         "title": "{{{name}}} - {{{gymname}}} - {{tthm}}m ({{time}})",
-        "description": "{{addr}}\nQuick: {{move1}}, Charge: {{move2}} \nUnboosted: {{mincp20}} - {{cp20}}, Boosted: {{mincp25}} - {{cp25}} \n[Directions]({{{mapurl}}}) {{lat}},{{lon}}",
+        "description": "{{bigarea}}: {{addr}} {{zipcode}}\nQuick: {{move1}}, Charge: {{move2}} \nUnboosted: {{mincp20}} - {{cp20}}, Boosted: {{mincp25}} - {{cp25}} \n[Directions]({{{mapurl}}}) {{lat}},{{lon}}",
         "color": "{{color}}",
         "thumbnail": {
           "url": "{{{imgurl}}}"
@@ -238,7 +238,7 @@
     "4": {
       "embed": {
         "title": "Level {{level}} - {{{gymname}}} - {{tthm}}m ({{time}})",
-        "description": "{{addr}}\n[Directions]({{{mapurl}}}) {{lat}},{{lon}}",
+        "description": "{{bigarea}}: {{addr}} {{zipcode}}\n[Directions]({{{mapurl}}}) {{lat}},{{lon}}",
         "color": "{{color}}",
         "thumbnail": {
           "url": "{{{imgurl}}}"
