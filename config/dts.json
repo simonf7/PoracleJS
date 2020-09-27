@@ -33,7 +33,7 @@
     "3": {
       "embed": {
         "color": "{{ivcolor}}",
-        "title": "{{iv}}% - {{{name}}} - cp{{cp}} - {{tthm}}m ({{time}})",
+        "title": "{{iv}}% - {{{name}}}{{gendername}} - cp{{cp}} - {{tthm}}m ({{time}})",
         "description": "{{area}}: {{addr}} \nLevel: {{level}}, Stats: {{atk}}/{{ def }}/{{ sta }} \n Quick: {{move1}}, Charge: {{move2}} \n[Directions]({{{mapurl}}}) {{lat}},{{lon}}",
         "thumbnail": {
           "url": "{{{imgurl}}}"
@@ -88,7 +88,7 @@
     },
     "3": {
       "embed": {
-        "title": "{{{name}}} - {{tthm}}m ({{time}})",
+        "title": "{{{name}}}{{gendername}} - {{tthm}}m ({{time}})",
         "color": "{{color}}",
         "thumbnail": {
           "url": "{{{imgurl}}}"
@@ -155,7 +155,7 @@
     },
     "3": {
       "embed": {
-        "title": "{{{name}}} - {{{gymname}}} - {{tthm}}m ({{time}})",
+        "title": "{{{name}}}{{#evolution}} {{evolutionname}}{{/evolution}} - {{{gymname}}} - {{tthm}}m ({{time}})",
         "description": "{{area}}\nQuick: {{move1}}, Charge: {{move2}} \nUnboosted: {{mincp20}} - {{cp20}}, Boosted: {{mincp25}} - {{cp25}} \n[Directions]({{{mapurl}}}) {{lat}},{{lon}}",
         "color": "{{color}}",
         "thumbnail": {
@@ -169,7 +169,7 @@
     },
     "4": {
       "embed": {
-        "title": "{{{name}}} - {{{gymname}}} - {{tthm}}m ({{time}})",
+        "title": "{{{name}}}{{#evolution}} {{evolutionname}}{{/evolution}} - {{{gymname}}} - {{tthm}}m ({{time}})",
         "description": "{{bigarea}}: {{addr}} {{zipcode}}\nQuick: {{move1}}, Charge: {{move2}} \nUnboosted: {{mincp20}} - {{cp20}}, Boosted: {{mincp25}} - {{cp25}} \n[Directions]({{{mapurl}}}) {{lat}},{{lon}}",
         "color": "{{color}}",
         "thumbnail": {

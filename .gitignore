@@ -1,5 +1,6 @@
 logs/*.json
 config/*.json
+config-*
 !config/examples/*
 !config/dts.json
 !config/default.json

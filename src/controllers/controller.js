@@ -176,13 +176,13 @@ class Controller {
 		let areasCopy = JSON.parse(JSON.stringify(areas));
 		
 		let area = areasCopy.pop();
-		if (area == 'server' && areasCopy.length > 0) {
-			area = areasCopy.pop();
-		}
 		if (area == 'south-norfolk' && areasCopy.length > 0) {
 			area = areasCopy.pop();
 		}
 		if (area == 'north-norfolk' && areasCopy.length > 0) {
+			area = areasCopy.pop();
+		}
+		if (area == 'server' && areasCopy.length > 0) {
 			area = areasCopy.pop();
 		}
 		if (area == 'norwich' && areasCopy.length > 0) {
